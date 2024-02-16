@@ -9,6 +9,10 @@
     /* font-family: ; */
 }
 
+body{
+    height: 100vh;
+    width: 100vw;
+}
 
 
 /* NavBar Section styling.... */
@@ -55,16 +59,26 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 90vh;
+    height: 90vh;
+}
+
+.choose-file{
+    top: 200px;
+    position: absolute;
 }
 
 .add-more-files {
     width: 50vw;
     border-radius: .3rem;
-    padding: 3rem;
-    text-align: center;
+    /* padding: 3rem; */
     background: rgba(230, 230, 250, .3);
     box-shadow: rgba(0, 0, 0, .35) 0px 5px 15px;
+    width: 30rem;
+    height: 20rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 
@@ -78,11 +92,17 @@
     width: 15rem;
     border: 1px dashed rgb(195, 192, 193);
     border-radius: 50%;
-    margin: auto;
+    margin: 0 10px;
     background: rgba(154, 127, 228, .06);
     border-width: .15rem;
 }
 
+.drop-drag{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 
 
 #upload-file {
@@ -253,20 +273,23 @@ span {
 
 
 
-/* footer section styling... */
-footer{
-    background: gray;
-    color: white;
-    text-align: center;
-}
-
-
-
 /* RESPONSIVE OF THE SITE */
 @media (max-width:415px) {
     .create-pdf {
         display: flex;
         align-items: center;
         flex-direction: column;
+    }
+}
+
+@media (max-width:650px) {
+    .add-more-files{
+        width: 75vw;
+    }
+}
+
+@media (max-width: 750px) {
+    .choose-file{
+        top: 150px;
     }
 }
